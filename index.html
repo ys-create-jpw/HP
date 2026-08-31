@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Black &RED</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#ffa500', // プロジェクト仕様のメインカラー
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold text-gray-900 tracking-wider">
+                Cafe Black &RED
+            </a>
+            
+            <div class="flex items-center space-x-6">
+                <!-- ナビゲーション（Conceptの右隣にAboutを追加） -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                    <a href="#concept" class="hover:text-main transition-colors duration-300">Concept</a>
+                    <a href="about.html" class="hover:text-main transition-colors duration-300">About</a>
+                    <a href="#menu" class="hover:text-main transition-colors duration-300">Menu</a>
+                    <a href="#info" class="hover:text-main transition-colors duration-300">Access</a>
+                </nav>
+                <a href="#info" class="bg-main hover:bg-orange-500 text-white font-bold py-2 px-5 rounded-full shadow-md transition-colors duration-300 text-sm md:text-base flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    予約する
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- ヒーローセクション -->
+        <section id="hero">
+            <div class="relative w-full h-[70vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1200x800');">
+                <!-- 暗い半透明のオーバーレイ -->
+                <div class="absolute inset-0 bg-black/50"></div>
+                
+                <!-- テキストとボタンのコンテナ -->
+                <div class="relative z-10 text-center px-4 flex flex-col items-center w-full max-w-4xl mx-auto">
+                    <!-- キャッチコピー -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-snug drop-shadow-md">
+                        サンプルテキスト
+                    </h1>
+                    
+                    <!-- サブコピー -->
+                    <p class="text-sm sm:text-base md:text-xl text-gray-200 mb-8 drop-shadow-md">
+                        [埼玉県和光市。日常を忘れる特別なひとときを。]
+                    </p>
+                    
+                    <!-- CTAボタンエリア（予約ボタンのみに戻しました） -->
+                    <div class="mt-4">
+                        <a href="#info" class="bg-main hover:bg-orange-500 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full shadow-lg transition-transform hover:scale-105 duration-300 text-base md:text-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-utensils"></i>
+                            [WEB予約はこちら]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コンセプトセクション -->
+        <section id="concept">
+            <div class="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
+                <!-- セクション見出し -->
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 tracking-wide">Concept</h2>
+                    <span class="text-sm md:text-base text-gray-500">-私たちのこだわり-</span>
+                </div>
+
+                <!-- コンテンツレイアウト -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <!-- 画像エリア -->
+                    <div class="w-full md:w-1/2">
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://via.placeholder.com/600x400" alt="農家直送の新鮮野菜" class="w-full h-auto object-cover aspect-[3/2]">
+                        </div>
+                    </div>
+
+                    <!-- テキストエリア -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                            [農家直送の新鮮野菜]
+                        </h3>
+                        <div class="w-12 h-1 bg-main mb-6"></div>
+                        <p class="text-gray-600 leading-loose text-base md:text-lg">
+                            [ここにコンセプトの文章が入ります。自然の恵みが詰まったこだわりの味わいを、落ち着いた店内で心ゆくまでお楽しみください。日常にちょっとした贅沢と健康を。]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- メニューセクション -->
+        <section id="menu">
+            <div class="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
+                <!-- セクション見出し -->
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 tracking-wide">Menu</h2>
+                    <span class="text-sm md:text-base text-gray-500">-おすすめメニュー-</span>
+                </div>
+
+                <!-- グリッドレイアウト -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- カード1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <img src="https://via.placeholder.com/400x300" alt="ホットコーヒー" class="w-full aspect-[4/3] object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">[ホットコーヒー]</h3>
+                            <p class="text-main font-bold text-lg mb-4">[¥500]</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                [ママが厳選した最高峰のコーヒー豆。]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- カード2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <img src="https://via.placeholder.com/400x300" alt="ホットコーヒー" class="w-full aspect-[4/3] object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">[ホットコーヒー]</h3>
+                            <p class="text-main font-bold text-lg mb-4">[¥500]</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                [ママが厳選した最高峰のコーヒー豆。]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- カード3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <img src="https://via.placeholder.com/400x300" alt="ホットコーヒー" class="w-full aspect-[4/3] object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">[ホットコーヒー]</h3>
+                            <p class="text-main font-bold text-lg mb-4">[¥500]</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                [ママが厳選した最高峰のコーヒー豆。]
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- インフォメーションセクション -->
+        <section id="info">
+            <div class="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
+                <!-- セクション見出し -->
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 tracking-wide">Information</h2>
+                    <span class="text-sm md:text-base text-gray-500">-店舗情報-</span>
+                </div>
+
+                <!-- コンテンツレイアウト -->
+                <div class="flex flex-col md:flex-row gap-10 md:gap-12 items-center">
+                    
+                    <!-- 左側：店舗情報と表 -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Cafe Black &RED</h3>
+                        
+                        <div class="mb-8 space-y-3">
+                            <p class="text-gray-600 text-base md:text-lg flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-main w-5 text-center"></i>
+                                〒351-01xx 埼玉県和光市〇〇 1-2-3
+                            </p>
+                            <p class="text-gray-600 text-base md:text-lg flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-main w-5 text-center"></i>
+                                048-xxx-xxxx
+                            </p>
+                        </div>
+
+                        <!-- 営業時間・定休日の表 -->
+                        <table class="w-full text-left border-collapse border border-gray-300 shadow-sm">
+                            <tbody>
+                                <tr class="border-b border-gray-300">
+                                    <th class="py-4 px-5 bg-gray-50 font-medium text-gray-700 w-1/3 border-r border-gray-300">営業時間</th>
+                                    <td class="py-4 px-5 text-gray-600">10:00 - 19:00</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-4 px-5 bg-gray-50 font-medium text-gray-700 w-1/3 border-r border-gray-300">定休日</th>
+                                    <td class="py-4 px-5 text-gray-600">水曜日・木曜日</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 右側：Googleマップ（プレースホルダー） -->
+                    <div class="w-full md:w-1/2">
+                        <div class="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 shadow-inner border border-gray-300">
+                            ここにGoogleマップが入ります
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <h2 class="text-2xl font-bold mb-6 tracking-wider">Cafe Black &RED</h2>
+            
+            <div class="flex space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+            
+            <p class="text-gray-400 text-sm">
+                &copy; 2026 Cafe Black &RED. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
