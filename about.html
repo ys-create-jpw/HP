@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cafe Black &RED</title>
+    
+    <!-- Google Fonts (Noto Sans JP) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#ffa500', // プロジェクト仕様のメインカラー
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- 店舗名ロゴ -->
+            <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-900 tracking-wider">
+                Cafe Black &RED
+            </a>
+            
+            <!-- ナビゲーション & 予約ボタン -->
+            <div class="flex items-center space-x-6">
+                <!-- PC用ナビゲーション (モバイルでは非表示) -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                    <a href="index.html" class="hover:text-main transition-colors duration-300">Home</a>
+                    <a href="about.html" class="text-main font-bold hover:text-orange-500 transition-colors duration-300">About</a>
+                    <a href="menu.html" class="hover:text-main transition-colors duration-300">Menu</a>
+                    <a href="index.html#info" class="hover:text-main transition-colors duration-300">Access</a>
+                </nav>
+                <!-- 予約ボタン -->
+                <a href="index.html#info" class="bg-main hover:bg-orange-500 text-white font-bold py-2 px-5 rounded-full shadow-md transition-colors duration-300 text-sm md:text-base flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    予約する
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- ページヘッダー (About Us) -->
+        <section id="about-hero"></section>
+        
+        <!-- 私たちのストーリー -->
+        <section id="story"></section>
+        <!-- タイトルエリア -->
+<div class="container mx-auto px-4 pt-16 md:pt-24 pb-8 text-center">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-2 tracking-wider">
+        私たちのストーリー
+    </h2>
+    <span class="text-lg md:text-xl text-main font-bold">Our Story</span>
+</div>
+
+<!-- 夫婦の写真（画面幅いっぱい） -->
+<div class="w-full mb-16 md:mb-24">
+    <img src="https://via.placeholder.com/1600x600" alt="夫婦の笑顔" class="w-full h-[40vh] md:h-[60vh] object-cover">
+</div>
+
+<!-- ストーリー詳細エリア（ジグザグレイアウト） -->
+<div class="container mx-auto px-4 pb-16 md:pb-24 max-w-5xl">
+    <div class="space-y-20 md:space-y-32">
+        
+        <!-- 奥さんのこだわり（PC：左に画像、右にテキスト） -->
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            <div class="w-full md:w-1/2">
+                <img src="https://via.placeholder.com/600x450" alt="奥さんがコーヒーを入れている画像" class="w-full h-auto object-cover rounded-2xl shadow-lg aspect-[4/3]">
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-main inline-block pb-2 self-start">
+                    奥さんのこだわり
+                </h3>
+                <p class="text-gray-700 leading-loose text-base md:text-lg font-medium">
+                    サンプルテキスト
+                </p>
+            </div>
+        </div>
+
+        <!-- 旦那さんのこだわり（PC：左にテキスト、右に画像） -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+            <div class="w-full md:w-1/2">
+                <img src="https://via.placeholder.com/600x450" alt="旦那さんがケーキ作りをしている画像" class="w-full h-auto object-cover rounded-2xl shadow-lg aspect-[4/3]">
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-main inline-block pb-2 self-start">
+                    旦那さんのこだわり
+                </h3>
+                <p class="text-gray-700 leading-loose text-base md:text-lg font-medium">
+                    サンプルテキスト
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+        <!-- 空間のこだわり -->
+        <section id="atmosphere"></section>
+    </main>
+<!-- タイトルエリア -->
+<div class="container mx-auto px-4 pt-16 md:pt-24 pb-8 text-center">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-2 tracking-wider">
+        空間のこだわり
+    </h2>
+    <span class="text-lg md:text-xl text-main font-bold">Atmosphere</span>
+</div>
+
+<!-- お客さんがくつろいでいる写真（画面幅いっぱい） -->
+<div class="w-full mb-10 md:mb-16">
+    <img src="https://via.placeholder.com/1600x600" alt="くつろぐお客様と店内の雰囲気" class="w-full h-[40vh] md:h-[60vh] object-cover">
+</div>
+
+<!-- 空間の説明テキスト -->
+<div class="container mx-auto px-4 pb-16 md:pb-24 max-w-3xl text-center">
+    <p class="text-gray-700 leading-relaxed text-lg md:text-2xl font-medium">
+        ゆったりとしたソファ席と、柔らかな自然光が差し込む店内。忙しい日常を忘れ、心ほぐれる至福のひとときをお過ごしください。
+    </p>
+</div>
+  
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 mt-12">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <!-- フッター店舗名 -->
+            <h2 class="text-2xl font-bold mb-6 tracking-wider">Cafe Black &RED</h2>
+            
+            <!-- SNSアイコン -->
+            <div class="flex space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-main transition-colors duration-300 text-2xl" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+            
+            <!-- コピーライト -->
+            <p class="text-gray-400 text-sm">
+                &copy; 2026 Cafe Black &RED. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
